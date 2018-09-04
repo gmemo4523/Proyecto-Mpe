@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1"
+          xmlns:f="http://java.sun.com/jsf/core"
+          xmlns:h="http://java.sun.com/jsf/html"
+          xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+  <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+  <f:view>
+    <af:document id="d1">
+      <af:form id="f1">
+        <af:table var="row" rowBandingInterval="0" id="t1">
+          <af:column sortable="false" headerText="col1" id="c3">
+            <af:commandLink id="ot4" text="#{row.col1}">
+              <af:showPopupBehavior popupId="::p1" triggerType="action"/>
+            </af:commandLink>
+          </af:column>
+          <af:column sortable="false" headerText="col2" id="c2">
+            <af:outputText value="#{row.col2}" id="ot3"/>
+          </af:column>
+          <af:column sortable="false" headerText="col3" id="c4">
+            <af:outputText value="#{row.col3}" id="ot1"/>
+          </af:column>
+          <af:column sortable="false" headerText="col4" id="c1">
+            <af:commandLink id="ot2" text="#{row.col1}">
+              <link rel="stylesheet" media="screen" type="text/css"/>
+            </af:commandLink>
+          </af:column>
+        </af:table>
+        <af:popup id="p1">
+          <af:panelWindow id="pw1">
+            <af:listView id="lv1">
+              <f:facet name="groupHeaderStamp"/>
+            </af:listView>
+          </af:panelWindow>
+        </af:popup>
+      </af:form>
+    </af:document>
+  </f:view>
+</jsp:root>

@@ -1,0 +1,132 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<jdevws:WebServiceProxy xmlns:jdevws="http://xmlns.oracle.com/jdeveloper/10130/webserviceproxy">
+   <list n="CHILD_NODES">
+      <url path="ValidarCajaAbiertaBindingQSService.xml"/>
+      <url path="../../type/validacaja/RespuestaServicio.java"/>
+      <url path="../../type/validacaja/ResponseType.java"/>
+      <url path="../../type/validacaja/EntValidarCajaAbiertaInReqType.java"/>
+      <url path="../../type/validacaja/DetalleErrorType.java"/>
+      <url path="../../type/validacaja/CCLAMWClientsType.java"/>
+      <url path="ValidarCajaAbiertaBindingQSService.java"/>
+      <url path="../../type/validacaja/ObjectFactory.java"/>
+      <url path="../../type/validacaja/EntValidarCajaAbiertaOutResTYPE.java"/>
+      <url path="../../type/validacaja/CajaTYPE.java"/>
+      <url path="ValidarCajaAbiertaBindingQSPortClient.java"/>
+      <url path="ValidarCajaAbiertaOperacionPortType.java"/>
+      <url path="../../type/validacaja/package-info.java"/>
+   </list>
+   <hash n="DATA_MODEL">
+      <value n="ATTACHMENT_ENCODING" v="MTOM"/>
+      <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.WebServiceProxy"/>
+      <url n="ORACLE_WEBSERVICES_XML" path="ValidarCajaAbiertaBindingQSService.xml"/>
+      <hash n="PROPERTY_GROUPS">
+         <hash n="WSDL_TO_JAVA_PROPERTIES">
+            <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.java.WSDLToJavaProperties"/>
+            <value n="WSDL2JAVA_DEFAULT_PACKAGE" v="cl.com.ccla.mpe.webservices.validacaja"/>
+            <value n="WSDL2JAVA_ROOT_VALUE_PACKAGE" v="cl.com.ccla.mpe.type.validacaja"/>
+            <value n="WSDL2JAVA_UNWRAP_PARAMETERS" v="false"/>
+         </hash>
+      </hash>
+      <value n="PROXY_ASYNC_METHODS" v="FOR_ENABLED"/>
+      <list n="PROXY_CLIENTS">
+         <url path="ValidarCajaAbiertaBindingQSPortClient.java"/>
+      </list>
+      <value n="PROXY_MAPPING_URL"/>
+      <hash n="PROXY_PORTS">
+         <hash n="ValidarCajaAbiertaBindingQSPort">
+            <value n="ACCESSES_DOC_WRAPPPED" v="false"/>
+            <value n="ACCESSES_RPC_ENCODED" v="false"/>
+            <value n="CLASS_NAME" v="cl.com.ccla.mpe.webservices.validacaja.ValidarCajaAbiertaOperacionPortType"/>
+            <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyPort"/>
+            <value n="NAME" v="ValidarCajaAbiertaBindingQSPort"/>
+            <hash n="OPERATIONS">
+               <hash n="validarCajaAbierta">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+            </hash>
+            <hash n="PROPERTY_GROUPS">
+               <hash n="WS_CLIENT_POLICY">
+                  <value n="addressing"/>
+                  <list n="management"/>
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.policy.PolicyClientModel"/>
+                  <value n="mtom"/>
+                  <hash n="POLICY_OVERRIDE_PROPERTIES"/>
+                  <list n="security"/>
+                  <value n="wsrm"/>
+               </hash>
+            </hash>
+            <url n="PROXY_ORIGINAL_PORT_ENDPOINT" protocol="http" host="qa-osbweb" port="8005" path="/Financiero/PagoElectronico/ValidaCajasAbiertas/ValidaCajaAbierta"/>
+         </hash>
+      </hash>
+      <value n="PROXY_SERVICE_NAME" v="ValidarCajaAbiertaBindingQSService"/>
+      <value n="PROXY_SERVICE_NAMESPACE" v="http://ccla.cl/enterprise/catalogo/ebs/region"/>
+      <url n="PROXY_TARGET_PROJECT" path="../../../../../../../CCLAPagoElectronico.jpr"/>
+      <url n="PROXY_WSDL_URL" protocol="http" host="qa-osbweb" port="8005" path="/Financiero/PagoElectronico/ValidaCajasAbiertas/ValidaCajaAbierta" query="Wsdl"/>
+      <hash n="REFERENCED_WEBSERVICE">
+         <list n="BD_">
+            <hash>
+               <value n="BD_DEFAULT_DOCUMENT_WRAPPED" v="false"/>
+               <value n="BOUND_PORT_TYPE" v="{http://ccla.cl/enterprise/catalogo/ebs/region}ValidarCajaAbiertaOperacionPortType"/>
+               <value n="DEFAULT_NAME" v="false"/>
+               <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPBinding"/>
+               <value n="NAME" v="{http://ccla.cl/enterprise/catalogo/ebs/region}ValidarCajaAbiertaBinding"/>
+               <list n="OP_BINDINGS">
+                  <hash>
+                     <value n="BOUND_OPERATION" v="cl.com.ccla.mpe.type.validacaja.EntValidarCajaAbiertaOutResTYPE.validarCajaAbierta.cl.com.ccla.mpe.type.validacaja.EntValidarCajaAbiertaInReqType.cl.com.ccla.mpe.type.validacaja.CCLAMWClientsType"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+               </list>
+               <hash n="PROPERTY_GROUPS"/>
+            </hash>
+         </list>
+         <list n="BINDING_FILES"/>
+         <value n="GUID" v="90b34de7-0165-1000-8002-0a62136c8503"/>
+         <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.WebServiceProxy$ProxyJavaWebService"/>
+         <list n="PO_">
+            <hash>
+               <value n="DEFAULT_NAME" v="false"/>
+               <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPPort"/>
+               <value n="NAME" v="ValidarCajaAbiertaBindingQSPort"/>
+               <value n="PORT_BINDING_NAME" v="{http://ccla.cl/enterprise/catalogo/ebs/region}ValidarCajaAbiertaBinding"/>
+               <list n="PORT_OPS">
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="cl.com.ccla.mpe.type.validacaja.EntValidarCajaAbiertaOutResTYPE.validarCajaAbierta.cl.com.ccla.mpe.type.validacaja.EntValidarCajaAbiertaInReqType.cl.com.ccla.mpe.type.validacaja.CCLAMWClientsType"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+               </list>
+               <hash n="PROPERTY_GROUPS"/>
+               <url n="URL" protocol="http" host="qa-osbweb" port="8005" path="/Financiero/PagoElectronico/ValidaCajasAbiertas/ValidaCajaAbierta"/>
+            </hash>
+         </list>
+         <hash n="PROPERTY_GROUPS">
+            <hash n="WSDL_TO_JAVA_PROPERTIES">
+               <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.java.WSDLToJavaProperties"/>
+               <value n="WSDL2JAVA_DEFAULT_PACKAGE" v="cl.com.ccla.mpe.webservices.validacaja"/>
+               <value n="WSDL2JAVA_ROOT_VALUE_PACKAGE" v="cl.com.ccla.mpe.type.validacaja"/>
+               <value n="WSDL2JAVA_UNWRAP_PARAMETERS" v="false"/>
+            </hash>
+         </hash>
+         <list n="PT_">
+            <hash>
+               <value n="AUTO_SERVICE_INTERFACE"/>
+               <value n="DEFAULT_NAME" v="false"/>
+               <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.java.JavaPortType"/>
+               <value n="NAME" v="{http://ccla.cl/enterprise/catalogo/ebs/region}ValidarCajaAbiertaOperacionPortType"/>
+               <hash n="PROPERTY_GROUPS"/>
+               <value n="PT_CLASS" v="cl.com.ccla.mpe.webservices.validacaja.ValidarCajaAbiertaOperacionPortTypeImpl"/>
+               <value n="PT_SERVICE_INTERFACE" v="cl.com.ccla.mpe.webservices.validacaja.ValidarCajaAbiertaOperacionPortType"/>
+            </hash>
+         </list>
+         <url n="TARGET_PROJECT" path="../../../../../../../CCLAPagoElectronico.jpr"/>
+         <value n="WS_ORIG_GEN_DIRECTION" v="TOP_DOWN"/>
+         <value n="WS_TARGET_NAMESPACE" v="http://ccla.cl/enterprise/catalogo/ebs/region"/>
+         <value n="WS_URI" v="ValidarCajaAbiertaBindingQSService"/>
+         <url n="WS_WSDL_FILE" protocol="http" host="qa-osbweb" port="8005" path="/Financiero/PagoElectronico/ValidaCajasAbiertas/ValidaCajaAbierta" query="Wsdl"/>
+      </hash>
+      <value n="SERVICE_ASYNC" v="false"/>
+      <value n="WSDL_IS_LOCAL_COPY" v="false"/>
+   </hash>
+</jdevws:WebServiceProxy>

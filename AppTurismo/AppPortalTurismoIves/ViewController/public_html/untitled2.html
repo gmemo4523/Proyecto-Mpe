@@ -1,0 +1,33 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></meta>
+    <title>untitled2</title>
+  
+  
+  
+  </head> 
+  
+  <body><script> var data = JSON.stringify({
+  "rut": "8990310",
+  "url": "qa-osbweb:8005"
+});
+
+var xhr = new XMLHttpRequest();
+xhr.withCredentials = true;
+
+xhr.addEventListener("readystatechange", function () {
+  if (this.readyState === 4) {
+    console.log(this.responseText);
+  }
+});
+
+xhr.open("POST", "http://pwpappqa4:9000/CclaServices/servicios/ConsultaDatosTurismoBean/DatosTurismo");
+xhr.setRequestHeader("Content-Type", "application/json");
+xhr.setRequestHeader("Cache-Control", "no-cache");
+xhr.setRequestHeader("Postman-Token", "7a6830bc-78e4-4f25-8f22-5bf9d0664eac");
+
+xhr.send(data);</script></body>
+  
+   
+</html>

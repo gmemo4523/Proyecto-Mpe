@@ -1,0 +1,16 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<oracle-webservice-clients xmlns:ns2="http://java.sun.com/xml/ns/javaee">
+   <webservice-client>
+      <service-qname namespaceURI="http://producto.notificacion.dashboard.ws.ccla.cl/"
+                     localpart="WSDSHNotifProdService"/>
+      <port-info>
+         <wsdl-port namespaceURI="http://producto.notificacion.dashboard.ws.ccla.cl/"
+                    localpart="WSDSHNotifProdPort"/>
+         <runtime/>
+         <operations>
+            <operation name="notificarTrxWP"/>
+            <operation name="notificarTrxPROD"/>
+         </operations>
+      </port-info>
+   </webservice-client>
+</oracle-webservice-clients>

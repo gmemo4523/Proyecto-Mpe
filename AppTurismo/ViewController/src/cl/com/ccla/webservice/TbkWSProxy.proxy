@@ -1,0 +1,154 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<jdevws:WebServiceProxy xmlns:jdevws="http://xmlns.oracle.com/jdeveloper/10130/webserviceproxy">
+   <list n="CHILD_NODES">
+      <url path="TbkWS_Service.xml"/>
+      <url path="TbkWS_Service.java"/>
+      <url path="../type/WsTransactionDetailOutput.java"/>
+      <url path="../type/WsTransactionDetail.java"/>
+      <url path="TbkWS.java"/>
+      <url path="../type/CardDetail.java"/>
+      <url path="../type/GetResultadoResponse.java"/>
+      <url path="../type/ObjectFactory.java"/>
+      <url path="../type/InitTbk.java"/>
+      <url path="../type/InitVO.java"/>
+      <url path="../type/package-info.java"/>
+      <url path="../type/TransactionResultOutput.java"/>
+      <url path="TbkWSPortClient.java"/>
+      <url path="../type/InitMpeTbkVO.java"/>
+      <url path="../type/GetResultado.java"/>
+      <url path="../type/InitTbkResponse.java"/>
+   </list>
+   <hash n="DATA_MODEL">
+      <value n="ATTACHMENT_ENCODING" v="MTOM"/>
+      <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.WebServiceProxy"/>
+      <url n="ORACLE_WEBSERVICES_XML" path="TbkWS_Service.xml"/>
+      <hash n="PROPERTY_GROUPS">
+         <hash n="WSDL_TO_JAVA_PROPERTIES">
+            <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.java.WSDLToJavaProperties"/>
+            <value n="WSDL2JAVA_DEFAULT_PACKAGE" v="cl.com.ccla.webservice"/>
+            <value n="WSDL2JAVA_ROOT_VALUE_PACKAGE" v="cl.com.ccla.type"/>
+         </hash>
+      </hash>
+      <value n="PROXY_ASYNC_METHODS" v="FOR_ENABLED"/>
+      <list n="PROXY_CLIENTS">
+         <url path="TbkWSPortClient.java"/>
+      </list>
+      <value n="PROXY_MAPPING_URL"/>
+      <hash n="PROXY_PORTS">
+         <hash n="TbkWSPort">
+            <value n="ACCESSES_DOC_WRAPPPED" v="true"/>
+            <value n="ACCESSES_RPC_ENCODED" v="false"/>
+            <value n="CLASS_NAME" v="cl.com.ccla.webservice.TbkWS"/>
+            <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyPort"/>
+            <value n="NAME" v="TbkWSPort"/>
+            <hash n="OPERATIONS">
+               <hash n="getResultado">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="initTbk">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+            </hash>
+            <hash n="PROPERTY_GROUPS">
+               <hash n="WS_CLIENT_POLICY">
+                  <value n="addressing"/>
+                  <list n="management"/>
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.policy.PolicyClientModel"/>
+                  <value n="mtom"/>
+                  <hash n="POLICY_OVERRIDE_PROPERTIES"/>
+                  <list n="security"/>
+                  <value n="wsrm"/>
+               </hash>
+            </hash>
+            <url n="PROXY_ORIGINAL_PORT_ENDPOINT" protocol="http" host="merelava" port="8080" path="/TbkAppv1/TbkWS"/>
+         </hash>
+      </hash>
+      <value n="PROXY_SERVICE_NAME" v="TbkWS"/>
+      <value n="PROXY_SERVICE_NAMESPACE" v="http://ws/"/>
+      <url n="PROXY_TARGET_PROJECT" path="../../../../../ViewController.jpr"/>
+      <url n="PROXY_WSDL_URL" protocol="http" host="merelava" port="8080" path="/TbkAppv1/TbkWS" query="wsdl"/>
+      <hash n="REFERENCED_WEBSERVICE">
+         <list n="BD_">
+            <hash>
+               <value n="BOUND_PORT_TYPE" v="{http://ws/}TbkWS"/>
+               <value n="DEFAULT_NAME" v="false"/>
+               <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPBinding"/>
+               <value n="NAME" v="{http://ws/}TbkWSPortBinding"/>
+               <list n="OP_BINDINGS">
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v=""/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_OUTPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="cl.com.ccla.type.InitVO.initTbk.cl.com.ccla.type.InitMpeTbkVO"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v=""/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_OUTPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="cl.com.ccla.type.TransactionResultOutput.getResultado.java.lang.String"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+               </list>
+               <hash n="PROPERTY_GROUPS"/>
+            </hash>
+         </list>
+         <list n="BINDING_FILES"/>
+         <value n="GUID" v="681e70bc-0165-1000-8006-ac100a0af17a"/>
+         <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.WebServiceProxy$ProxyJavaWebService"/>
+         <list n="PO_">
+            <hash>
+               <value n="DEFAULT_NAME" v="false"/>
+               <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPPort"/>
+               <value n="NAME" v="TbkWSPort"/>
+               <value n="PORT_BINDING_NAME" v="{http://ws/}TbkWSPortBinding"/>
+               <list n="PORT_OPS">
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="cl.com.ccla.type.InitVO.initTbk.cl.com.ccla.type.InitMpeTbkVO"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="cl.com.ccla.type.TransactionResultOutput.getResultado.java.lang.String"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+               </list>
+               <hash n="PROPERTY_GROUPS"/>
+               <url n="URL" protocol="http" host="merelava" port="8080" path="/TbkAppv1/TbkWS"/>
+            </hash>
+         </list>
+         <hash n="PROPERTY_GROUPS">
+            <hash n="WSDL_TO_JAVA_PROPERTIES">
+               <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.java.WSDLToJavaProperties"/>
+               <value n="WSDL2JAVA_DEFAULT_PACKAGE" v="cl.com.ccla.webservice"/>
+               <value n="WSDL2JAVA_ROOT_VALUE_PACKAGE" v="cl.com.ccla.type"/>
+            </hash>
+         </hash>
+         <list n="PT_">
+            <hash>
+               <value n="AUTO_SERVICE_INTERFACE"/>
+               <value n="DEFAULT_NAME" v="false"/>
+               <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.java.JavaPortType"/>
+               <value n="NAME" v="{http://ws/}TbkWS"/>
+               <hash n="PROPERTY_GROUPS"/>
+               <value n="PT_CLASS" v="cl.com.ccla.webservice.TbkWSImpl"/>
+               <value n="PT_SERVICE_INTERFACE" v="cl.com.ccla.webservice.TbkWS"/>
+            </hash>
+         </list>
+         <url n="TARGET_PROJECT" path="../../../../../ViewController.jpr"/>
+         <value n="WS_ORIG_GEN_DIRECTION" v="TOP_DOWN"/>
+         <value n="WS_TARGET_NAMESPACE" v="http://ws/"/>
+         <value n="WS_URI" v="TbkWS"/>
+         <url n="WS_WSDL_FILE" protocol="http" host="merelava" port="8080" path="/TbkAppv1/TbkWS" query="wsdl"/>
+      </hash>
+      <value n="SERVICE_ASYNC" v="false"/>
+      <value n="WSDL_IS_LOCAL_COPY" v="false"/>
+   </hash>
+</jdevws:WebServiceProxy>

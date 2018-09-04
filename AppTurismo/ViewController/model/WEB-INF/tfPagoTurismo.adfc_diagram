@@ -1,0 +1,49 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<SDM>
+   <OverallProperties
+      id="OverallProperties1"/>
+   <View
+      id="View9">
+      <property
+         name="activityId">PagoTurismo</property>
+      <property
+         name="page">/PagoTurismo.jsff</property>
+      <property
+         name="start">false</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>PagoTurismo&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
+      <property
+         name="exceptionHandler">false</property>
+      <property
+         name="y">138.0459</property>
+      <property
+         name="x">240.68066</property>
+      <property
+         name="pageFragment">true</property>
+   </View>
+   <MethodCall
+      id="MethodCall3">
+      <property
+         name="activityId">initial</property>
+      <property
+         name="start">true</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>initial&lt;/b> (Default Activity)&lt;/p>&lt;p>Activity Type:  Method Call&lt;/p></property>
+      <property
+         name="exceptionHandler">false</property>
+      <property
+         name="y">133.59766</property>
+      <property
+         name="x">84.0</property>
+   </MethodCall>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase6"
+      from="MethodCall3"
+      to="View9">
+      <property
+         name="fromOutcome">inicio</property>
+      <property
+         name="sdm:polyPoints">R50,125.0,133.24707,199.68066,137.69531,L50</property>
+   </ControlFlowCase>
+</SDM>

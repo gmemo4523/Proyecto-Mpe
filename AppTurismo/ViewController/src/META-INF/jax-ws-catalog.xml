@@ -1,0 +1,8 @@
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+  <system systemId="http://qa-osbweb:8005/Financiero/PagoElectronico/Consulta/HistorialTransaccion?wsdl"
+          uri="http://qa-osbweb:8005/Financiero/PagoElectronico/Consulta/HistorialTransaccion?wsdl"/>
+  <system systemId="http://qa-osbweb:8005/Financiero/PagoElectronico/ConsultaDatosTurismo?wsdl"
+          uri="http://qa-osbweb:8005/Financiero/PagoElectronico/ConsultaDatosTurismo?wsdl"/>
+  <system systemId="http://merelava:8080/TbkAppv1/TbkWS?wsdl"
+          uri="http://merelava:8080/TbkAppv1/TbkWS?wsdl"/>
+</catalog>

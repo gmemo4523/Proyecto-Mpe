@@ -1,0 +1,152 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<jdevws:WebServiceProxy xmlns:jdevws="http://xmlns.oracle.com/jdeveloper/10130/webserviceproxy">
+   <list n="CHILD_NODES">
+      <url path="WSDSHNotifProdService.xml"/>
+      <url path="../../type/DBNotificacion/RSNotificarTrxProd.java"/>
+      <url path="WSDSHNotifProdPortClient.java"/>
+      <url path="../../type/DBNotificacion/RQNotificarTrxProd.java"/>
+      <url path="WSDSHNotifProdService.java"/>
+      <url path="../../type/DBNotificacion/RQNotificarTrxWP.java"/>
+      <url path="WSDSHNotifProdIF.java"/>
+      <url path="../../type/DBNotificacion/RQDataWP.java"/>
+      <url path="../../type/DBNotificacion/ObjectFactory.java"/>
+      <url path="../../type/DBNotificacion/RSStatus.java"/>
+      <url path="../../type/DBNotificacion/RQNotifProd.java"/>
+      <url path="../../type/DBNotificacion/RSNotificarTrxWP.java"/>
+      <url path="../../type/DBNotificacion/package-info.java"/>
+   </list>
+   <hash n="DATA_MODEL">
+      <value n="ATTACHMENT_ENCODING" v="MTOM"/>
+      <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.WebServiceProxy"/>
+      <url n="ORACLE_WEBSERVICES_XML" path="WSDSHNotifProdService.xml"/>
+      <hash n="PROPERTY_GROUPS">
+         <hash n="WSDL_TO_JAVA_PROPERTIES">
+            <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.java.WSDLToJavaProperties"/>
+            <value n="WSDL2JAVA_DEFAULT_PACKAGE" v="cl.com.ccla.mpe.webservice.DBNotificacion"/>
+            <value n="WSDL2JAVA_ROOT_VALUE_PACKAGE" v="cl.com.ccla.mpe.type.DBNotificacion"/>
+            <value n="WSDL2JAVA_UNWRAP_PARAMETERS" v="false"/>
+         </hash>
+      </hash>
+      <value n="PROXY_ASYNC_METHODS" v="FOR_ENABLED"/>
+      <list n="PROXY_CLIENTS">
+         <url path="WSDSHNotifProdPortClient.java"/>
+      </list>
+      <value n="PROXY_MAPPING_URL"/>
+      <hash n="PROXY_PORTS">
+         <hash n="WSDSHNotifProdPort">
+            <value n="ACCESSES_DOC_WRAPPPED" v="false"/>
+            <value n="ACCESSES_RPC_ENCODED" v="false"/>
+            <value n="CLASS_NAME" v="cl.com.ccla.mpe.webservice.DBNotificacion.WSDSHNotifProdIF"/>
+            <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyPort"/>
+            <value n="NAME" v="WSDSHNotifProdPort"/>
+            <hash n="OPERATIONS">
+               <hash n="notificarTrxPROD">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="notificarTrxWP">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+            </hash>
+            <hash n="PROPERTY_GROUPS">
+               <hash n="WS_CLIENT_POLICY">
+                  <value n="addressing"/>
+                  <list n="management"/>
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.policy.PolicyClientModel"/>
+                  <value n="mtom"/>
+                  <hash n="POLICY_OVERRIDE_PROPERTIES"/>
+                  <list n="security"/>
+                  <value n="wsrm"/>
+               </hash>
+            </hash>
+            <url n="PROXY_ORIGINAL_PORT_ENDPOINT" protocol="http" host="qa-osbweb" port="8005" path="/Financiero/PagoElectronico/WsDashboardNotificacion/Proxy/WS_DSH_Notif_Prod"/>
+         </hash>
+      </hash>
+      <value n="PROXY_SERVICE_NAME" v="WSDSHNotifProdService"/>
+      <value n="PROXY_SERVICE_NAMESPACE" v="http://producto.notificacion.dashboard.ws.ccla.cl/"/>
+      <url n="PROXY_TARGET_PROJECT" path="../../../../../../../Project1.jpr"/>
+      <url n="PROXY_WSDL_URL" protocol="http" host="qa-osbweb" port="8005" path="/Financiero/PagoElectronico/WsDashboardNotificacion/Proxy/WS_DSH_Notif_Prod" query="wsdl"/>
+      <hash n="REFERENCED_WEBSERVICE">
+         <list n="BD_">
+            <hash>
+               <value n="BD_DEFAULT_SOAP_STYLE" v="0"/>
+               <value n="BOUND_PORT_TYPE" v="{http://producto.notificacion.dashboard.ws.ccla.cl/}WSDSHNotifProdIF"/>
+               <value n="DEFAULT_NAME" v="false"/>
+               <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPBinding"/>
+               <value n="NAME" v="{http://producto.notificacion.dashboard.ws.ccla.cl/}WSDSHNotifProdPortBinding"/>
+               <list n="OP_BINDINGS">
+                  <hash>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_OUTPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="0"/>
+                     <value n="BOUND_OPERATION" v="cl.com.ccla.mpe.type.DBNotificacion.RSNotificarTrxWP.notificarTrxWP.cl.com.ccla.mpe.type.DBNotificacion.RQNotificarTrxWP"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_OUTPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="0"/>
+                     <value n="BOUND_OPERATION" v="cl.com.ccla.mpe.type.DBNotificacion.RSNotificarTrxProd.notificarTrxPROD.cl.com.ccla.mpe.type.DBNotificacion.RQNotificarTrxProd"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+               </list>
+               <hash n="PROPERTY_GROUPS"/>
+            </hash>
+         </list>
+         <list n="BINDING_FILES"/>
+         <value n="GUID" v="80eebc30-0165-1000-8013-0a62138d96fb"/>
+         <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.WebServiceProxy$ProxyJavaWebService"/>
+         <list n="PO_">
+            <hash>
+               <value n="DEFAULT_NAME" v="false"/>
+               <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPPort"/>
+               <value n="NAME" v="WSDSHNotifProdPort"/>
+               <value n="PORT_BINDING_NAME" v="{http://producto.notificacion.dashboard.ws.ccla.cl/}WSDSHNotifProdPortBinding"/>
+               <list n="PORT_OPS">
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="cl.com.ccla.mpe.type.DBNotificacion.RSNotificarTrxWP.notificarTrxWP.cl.com.ccla.mpe.type.DBNotificacion.RQNotificarTrxWP"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="cl.com.ccla.mpe.type.DBNotificacion.RSNotificarTrxProd.notificarTrxPROD.cl.com.ccla.mpe.type.DBNotificacion.RQNotificarTrxProd"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+               </list>
+               <hash n="PROPERTY_GROUPS"/>
+               <url n="URL" protocol="http" host="qa-osbweb" port="8005" path="/Financiero/PagoElectronico/WsDashboardNotificacion/Proxy/WS_DSH_Notif_Prod"/>
+            </hash>
+         </list>
+         <hash n="PROPERTY_GROUPS">
+            <hash n="WSDL_TO_JAVA_PROPERTIES">
+               <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.java.WSDLToJavaProperties"/>
+               <value n="WSDL2JAVA_DEFAULT_PACKAGE" v="cl.com.ccla.mpe.webservice.DBNotificacion"/>
+               <value n="WSDL2JAVA_ROOT_VALUE_PACKAGE" v="cl.com.ccla.mpe.type.DBNotificacion"/>
+               <value n="WSDL2JAVA_UNWRAP_PARAMETERS" v="false"/>
+            </hash>
+         </hash>
+         <list n="PT_">
+            <hash>
+               <value n="AUTO_SERVICE_INTERFACE"/>
+               <value n="DEFAULT_NAME" v="false"/>
+               <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.java.JavaPortType"/>
+               <value n="NAME" v="{http://producto.notificacion.dashboard.ws.ccla.cl/}WSDSHNotifProdIF"/>
+               <hash n="PROPERTY_GROUPS"/>
+               <value n="PT_CLASS" v="cl.com.ccla.mpe.webservice.DBNotificacion.WSDSHNotifProdIFImpl"/>
+               <value n="PT_SERVICE_INTERFACE" v="cl.com.ccla.mpe.webservice.DBNotificacion.WSDSHNotifProdIF"/>
+            </hash>
+         </list>
+         <url n="TARGET_PROJECT" path="../../../../../../../Project1.jpr"/>
+         <value n="WS_ORIG_GEN_DIRECTION" v="TOP_DOWN"/>
+         <value n="WS_TARGET_NAMESPACE" v="http://producto.notificacion.dashboard.ws.ccla.cl/"/>
+         <value n="WS_URI" v="WSDSHNotifProdService"/>
+         <url n="WS_WSDL_FILE" protocol="http" host="qa-osbweb" port="8005" path="/Financiero/PagoElectronico/WsDashboardNotificacion/Proxy/WS_DSH_Notif_Prod" query="wsdl"/>
+      </hash>
+      <value n="SERVICE_ASYNC" v="false"/>
+      <value n="WSDL_IS_LOCAL_COPY" v="false"/>
+   </hash>
+</jdevws:WebServiceProxy>

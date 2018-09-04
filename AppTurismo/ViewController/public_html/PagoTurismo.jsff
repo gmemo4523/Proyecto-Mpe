@@ -1,0 +1,239 @@
+<?xml version='1.0' encoding='windows-1252'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1"
+          xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+          xmlns:h="http://java.sun.com/jsf/html">
+   <af:resource type="javascript"
+                source="/../wcstatic/js/libs/jquery-1.11.3.min.js"/>
+           
+                
+  
+   <af:group id="g1">
+      <af:panelGroupLayout id="pgl7" styleClass="pagos-tabla" >
+         <af:group id="g2">
+            <!-- Bloque tabla -->
+            
+             <af:panelGroupLayout id="pSupAhorro22" layout="vertical">
+               </af:panelGroupLayout>
+            <af:panelGroupLayout id="pSupAhorro2" layout="vertical"
+                                 styleClass="barraAcordeonHT rowAhorro af_panelGroupLayout">
+               <af:outputText value="#{applicationScope.handleLabelBean.values['PagoElectronicoTurismo']} "
+                              id="ot4"/>
+            </af:panelGroupLayout>
+            <af:panelGroupLayout id="pRow" layout="vertical" styleClass="">
+               <af:panelGroupLayout id="pSupAhorro" layout="vertical">
+                  <af:panelGroupLayout id="infoSupAhorro" layout="vertical"
+                                       styleClass=" table-content AFStretchWidth">
+                     <!--binding="#{pageFlowScope.pagoElectronicoBean.tt1}"-->
+                     <af:table value="#{pageFlowScope.pagoElectronicoBean.listaHistorialTurismo}"
+                               var="pagos" rowBandingInterval="0" id="tt1"
+                               autoHeightRows="0"
+                               blockRowNavigationOnError="always"
+                               styleClass="AFStretchWidth"
+                               rowSelection="multiple" scrollPolicy="page"
+                               fetchSize="10">
+                        <!-- <f:facet name="nodeStamp">-->
+                        <af:column sortable="false"
+                                   headerText="#{applicationScope.handleLabelBean.values['PagoElectronicoTurismoPagar']} "
+                                   id="c5" >
+                           <af:selectBooleanCheckbox value="#{pagos.status}"
+                                                     id="ot2" autoSubmit="true" 
+                                                     valueChangeListener="#{pageFlowScope.pagoElectronicoBean.actualizarTotalTurismo}">
+                              <af:setPropertyListener from="#{pagos.numeroComprobante}"
+                                                      to="#{pageFlowScope.pagoElectronicoBean.nroComprobanteSeleccionado}"
+                                                      type="valueChange"/>
+                           </af:selectBooleanCheckbox>
+                                        </af:column>
+                        <!-- </f:facet>-->
+                        <af:column sortable="false"
+                                   headerText="Cod. Reserva"
+                                   id="c1">
+                           <af:outputText value="#{pagos.codReserva}"
+                                          id="ot22"/>
+                        </af:column>
+                        <af:column sortable="false"
+                                   headerText="Fecha Vencimiento"
+                                   id="c3">
+                           <af:outputText value="#{pagos.fechaVencimiento}" id="ot3">
+                                <af:convertDateTime type="date" pattern="MMM-d-yyyy"/>
+                           </af:outputText>
+                        </af:column>
+                        
+                        <af:column sortable="false"
+                                   headerText="Abono(Cuota)"
+                                   id="c4">
+                           <af:outputText value="#{pagos.nroCuota}" id="ot20"/>
+                        </af:column>
+                        <af:column sortable="false"
+                                   headerText="Centro"
+                                   id="c8">
+                           <af:outputText value="#{pagos.centroTuristico}"
+                                          id="ot1"/>
+                        </af:column>
+                        <af:column sortable="false"
+                                   headerText="Monto"
+                                   id="c7">
+                           <af:outputText value="#{pagos.monto}" id="ot21">
+                                <af:convertNumber type="currency" currencySymbol="$" />
+                           </af:outputText>
+                        </af:column>
+                                 <af:column sortable="false"
+                                   headerText="Estado Pago"
+                                   id="c10">
+                           <af:outputText value="#{pagos.estadoPago}" id="ot2221"/>
+                        </af:column>
+                        <af:column sortable="false" visible="true" headerText="Detalle"
+                          id="c73">
+                             <af:commandLink id="ot212" text="ver"
+                                  actionListener="#{pageFlowScope.pagoElectronicoBean.CargaPopUp}">
+                                     <af:setPropertyListener from="#{pagos.codReserva}"
+                                             to="#{pageFlowScope.pagoElectronicoBean.codReservaPopup}"
+                                             type="action"/>
+                                     <af:showPopupBehavior popupId="::p1" triggerType="click"/>
+                  </af:commandLink>
+               </af:column>
+                        
+                     </af:table>
+                     <af:panelGroupLayout id="panel01">
+                        <af:outputText value="#{applicationScope.handleLabelBean.values['PagoElectronicoTurismoTotalPagar']} #{pageFlowScope.pagoElectronicoBean.totalTurismoFormat}"
+                                       partialTriggers="tt1:ot2" id="ot5"></af:outputText>
+                     </af:panelGroupLayout>
+                 
+                        <af:commandButton text="PAGO EN LINEA"
+                                          id="cb1"  action="#{pageFlowScope.pagoElectronicoBean.irTbk}"
+                                          disabled="#{pageFlowScope.pagoElectronicoBean.botonPago}" />
+                       <af:panelGroupLayout id="panel01220"
+                                          styleClass="mpecclamensaje">
+                         <af:outputText id="horario122" value="#{pageFlowScope.pagoElectronicoBean.mensaje}"
+                                   styleClass="mpecclatext" ></af:outputText>
+                     </af:panelGroupLayout>
+                     
+                  </af:panelGroupLayout>
+               </af:panelGroupLayout>
+            </af:panelGroupLayout>
+            <!-- Bloque tabla -->
+         </af:group>
+      </af:panelGroupLayout>
+      <af:popup id="p1">
+               <h:panelGroup styleClass="pago-electronico" id="pg2">
+                  <h:panelGroup styleClass="modalOne modal" id="pg3">
+                     <h:panelGroup styleClass="modal-content">
+                        <h:panelGrid styleClass="tabla-credito" columns="2"
+                                     border="1">
+                           <h:panelGroup id="pg1">
+                              N° comprobante
+                           </h:panelGroup>
+                           <h:panelGroup>
+                              <af:outputText id="prueba2"
+                                             value="#{pageFlowScope.pagoElectronicoBean.popupDetalle.numeroComprobante}"/>
+                           </h:panelGroup>
+                           <h:panelGroup>
+                              Codigo Reserva
+                           </h:panelGroup>
+                           <h:panelGroup>
+                              <af:outputText id="prueba3"
+                                             value="#{pageFlowScope.pagoElectronicoBean.popupDetalle.nroReserva}"/>
+                           </h:panelGroup>
+                           <h:panelGroup>
+                              Check IN
+                           </h:panelGroup>
+                           <h:panelGroup>
+                              <af:outputText id="prueba4"
+                                             value="#{pageFlowScope.pagoElectronicoBean.popupDetalle.checkIn}"/>
+                           </h:panelGroup>
+                           <h:panelGroup>
+                              check OUT
+                           </h:panelGroup>
+                           <h:panelGroup>
+                              <af:outputText id="prueba5"
+                                             value="#{pageFlowScope.pagoElectronicoBean.popupDetalle.checkOut}"/>
+                           </h:panelGroup>
+                           <h:panelGroup>
+                              Fecha Vencimiento
+                           </h:panelGroup>
+                           <h:panelGroup>
+                              <af:outputText id="prueba6"
+                                             value="#{pageFlowScope.pagoElectronicoBean.popupDetalle.fechaVencimiento}"/>
+                           </h:panelGroup>
+                           <h:panelGroup>
+                              Abono (cuota)
+                           </h:panelGroup>
+                           <h:panelGroup>
+                              <af:outputText id="prueba7"
+                                             value="#{pageFlowScope.pagoElectronicoBean.popupDetalle.montoCi}"/>
+                           </h:panelGroup>
+                           <h:panelGroup>
+                              Centro
+                           </h:panelGroup>
+                           <h:panelGroup>
+                              <af:outputText id="prueba8"
+                                             value="#{pageFlowScope.pagoElectronicoBean.popupDetalle.centro}"/>
+                           </h:panelGroup>
+                           <h:panelGroup>
+                              Monto
+                           </h:panelGroup>
+                           <h:panelGroup>
+                              <af:outputText id="prueba9"
+                                             value="#{pageFlowScope.pagoElectronicoBean.popupDetalle.montoCi}"/>
+                           </h:panelGroup>
+                           <h:panelGroup>
+                              Estado de Pago
+                           </h:panelGroup>
+                           <h:panelGroup>
+                              <af:outputText id="prueba10"
+                                             value="#{pageFlowScope.pagoElectronicoBean.estado}"/>
+                           </h:panelGroup>
+                        </h:panelGrid>
+                     </h:panelGroup>
+                  </h:panelGroup>
+               </h:panelGroup>
+            </af:popup>
+   </af:group>
+  
+
+   <af:resource type="javascript">
+          <![CDATA[
+    $(function(){
+    //
+    $(".pagos-tabla .table-content .valuesAhorro > div:nth-child(7n - 6)").unbind('click').click(function() {
+        //
+        var nro = ($(this).index()) + 6;
+
+        //
+        if($(this).parent().children('div:eq('+nro+')').children().hasClass('active')) {
+            $(this).parent().find('.inside-table').slideUp('slow').removeClass('active');
+        } else {
+            $(this).parent().find('.inside-table').slideUp('slow').removeClass('active');
+
+            $(this).parent().children('div:eq('+nro+')').children().slideDown('slow').addClass('active');
+        }
+    });
+
+    //
+    $(".pagos-tabla .barraAcordeon > div").unbind('click').click(function() {
+        //
+        var tableCont = $(this).parent().next().find('.table-content')[0];
+
+        //
+        if($(tableCont).hasClass('active')) {
+            $(tableCont).slideUp('slow').removeClass('active');
+        } else {
+            $(tableCont).slideDown('slow').addClass('active');
+        }
+    });
+
+    //
+    $(".pagos-tabla .barraAcordeonHT > div").unbind('click').click(function() {
+        //
+        var tableCont = $(this).parent().next().find('.table-content')[0];
+
+        //
+        if($(tableCont).hasClass('active')) {
+            $(tableCont).slideUp('slow').removeClass('active');
+        } else {
+            $(tableCont).slideDown('slow').addClass('active');
+        }
+    });
+});
+ ]]>
+   </af:resource>
+</jsp:root>

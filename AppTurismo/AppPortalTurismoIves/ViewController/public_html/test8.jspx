@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1" xmlns:f="http://java.sun.com/jsf/core"
+          xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <f:view>
+        <af:document title="JqueryADF.jspx" id="d1">
+            <af:resource type="javascript" source="/javascript/libs/jquery-1.4.4.js"/>
+            <af:resource type="javascript" source="/resources/js/inputText.js"/>
+         <af:resource type="javascript" source="/resources/js/closeWind.js"/>
+            <f:subview id="test">
+                <jsp:include page="/untitled1.jspx"/>
+            </f:subview>
+            <af:form id="f1">
+                <af:inputText label="Chck JQ" id="it1" contentStyle="font-weight:bold;">
+                    <af:clientListener type="keyDown" method="changeColor"/>
+                </af:inputText>  
+            </af:form>
+        </af:document>
+    </f:view>
+</jsp:root>
